@@ -31,6 +31,8 @@ class MainActivity : AppCompatActivity() {
     }
     fun equalsAction(view: View) {
         result.text=calculate()
+        history.text=working.text
+        working.text=result.text
     }
 
     private fun calculate(): String {
