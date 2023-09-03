@@ -16,7 +16,6 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         supportActionBar?.hide()
-
     }
 
 
@@ -70,7 +69,6 @@ class MainActivity : AppCompatActivity() {
             list=divison(digit)
         }
         return list
-
     }
 
     private fun divison(digit: MutableList<Any>): MutableList<Any> {
@@ -95,7 +93,6 @@ class MainActivity : AppCompatActivity() {
                     else ->{
                         new.add(prev)
                         new.add(operator)
-
                     }
                 }
             }
@@ -138,6 +135,10 @@ class MainActivity : AppCompatActivity() {
         {
             if(ch.isDigit()||ch=='.')
                 current+=ch
+            else if(ch=='%')
+            {
+                list.add(current.toFloat()/100)
+            }
             else
             {
                 list.add(current.toFloat())
